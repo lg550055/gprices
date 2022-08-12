@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react'
 import axios from 'axios'
 import Head from 'next/head'
 import Image from 'next/image'
+import Display from '../components/Display'
 import styles from '../styles/Home.module.css'
 
 export default function Home() {
@@ -31,7 +32,7 @@ export default function Home() {
         <p className={styles.description}>
           Help each other shop smart
         </p>
-        {items && <p>{items[0].name}</p>}
+        {items && <Display items={items}/>}
         <div className={styles.grid}>
           <a href="https://nextjs.org/docs" className={styles.card}>
             <h2>Documentation &rarr;</h2>
