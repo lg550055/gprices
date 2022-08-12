@@ -31,11 +31,11 @@ export default function AddForm(){
 
   return (
     <form method="PUT" onSubmit={handleSubmit}>
-      <input placeholder="name" name="name" required /><br></br>
+      <input placeholder="name" name="name" required />
       <input placeholder="brand" name="brand" required /><br></br>
-      <input placeholder="category" name="category" required /><br></br>
+      <input placeholder="category" name="category" required />
       <input placeholder="size" name="size" required /><br></br>
-      <input placeholder="unit" name="unit" required /><br></br>
+      <input placeholder="unit" name="unit" required />
       <input placeholder="price" name="price" required /><br></br>
       <button>Submit</button>
     </form>
