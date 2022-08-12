@@ -17,7 +17,7 @@ export default function Home() {
   })
   
   return (
-    <div className={styles.container}>
+    <div>
       <Head>
         <title>gPrices 0.0</title>
         <meta name="description" content="Help each other shop smart" />
@@ -31,17 +31,6 @@ export default function Home() {
         <p className={styles.description}>Help each other shop smart</p>
         <AddForm />        
         {items && <Display items={items}/>}
-        <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h2>Documentation &rarr;</h2>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
-
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h2>Learn &rarr;</h2>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
-        </div>
       </main>
 
       <footer className={styles.footer}>
