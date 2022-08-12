@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react'
 import axios from 'axios'
 import Head from 'next/head'
 import Image from 'next/image'
+import AddForm from '../components/AddForm'
 import Display from '../components/Display'
 import styles from '../styles/Home.module.css'
 
@@ -28,10 +29,8 @@ export default function Home() {
         <h1 className={styles.title}>
           Welcome to <a href="https://nextjs.org">gPrices!</a>
         </h1>
-
-        <p className={styles.description}>
-          Help each other shop smart
-        </p>
+        <p className={styles.description}>Help each other shop smart</p>
+        <AddForm />        
         {items && <Display items={items}/>}
         <div className={styles.grid}>
           <a href="https://nextjs.org/docs" className={styles.card}>
