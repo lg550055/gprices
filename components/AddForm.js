@@ -14,8 +14,9 @@ export default function AddForm(){
 
   function handleSubmit(e) {
     e.preventDefault();
+    // TODO: Generate unique id for new items
     const reqObj = {
-      id: '16',
+      id: '11',
       name: e.target.name.value,
       brand: e.target.brand.value,
       category: e.target.category.value,
@@ -24,19 +25,18 @@ export default function AddForm(){
       price: e.target.price.value *1,
       ppunit: (e.target.price.value/e.target.size.value).toFixed(1)
     }
-    console.log(reqObj)
     putItem(reqObj)
-    // e.target.reset()
+    e.target.reset()
   }
 
   return (
     <form method="PUT" onSubmit={handleSubmit}>
-      <input placeholder="name" name="name" required />
-      <input placeholder="brand" name="brand" required /><br></br>
-      <input placeholder="category" name="category" required />
-      <input placeholder="size" name="size" required /><br></br>
-      <input placeholder="unit" name="unit" required />
-      <input placeholder="price" name="price" required /><br></br>
+      <input placeholder="Name" name="name" required />
+      <input placeholder="Brand" name="brand" required /><br></br>
+      <input placeholder="Category" name="category" required />
+      <input placeholder="Size" name="size" required /><br></br>
+      <input placeholder="Unit" name="unit" required />
+      <input placeholder="Price" name="price" required /><br></br>
       <button>Submit</button>
     </form>
   )
