@@ -2,7 +2,7 @@ import axios from "axios";
 
 export default function AddForm(){
 
-  async function addRecord(reqObj) {
+  async function putItem(reqObj) {
     try {
       // TODO: Use appropriate CORS headers and settings
       const url = 'https://q3w9rey5g0.execute-api.us-east-2.amazonaws.com/items';
@@ -25,7 +25,7 @@ export default function AddForm(){
       ppunit: (e.target.price.value/e.target.size.value).toFixed(1)
     }
     console.log(reqObj)
-    addRecord(reqObj)
+    putItem(reqObj)
     // e.target.reset()
   }
 

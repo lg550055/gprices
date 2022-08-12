@@ -12,11 +12,10 @@ export default function Home() {
   const url = 'https://q3w9rey5g0.execute-api.us-east-2.amazonaws.com/items'
   useEffect(() => {
     axios.get(url).then(e => {
-      // console.log(e.data.Items);
       setItems(e.data.Items)
       })
   })
-  // console.log(items)
+  
   return (
     <div className={styles.container}>
       <Head>
