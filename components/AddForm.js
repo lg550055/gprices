@@ -1,17 +1,32 @@
+import axios from "axios";
+
 export default function AddForm(){
+
+  async function addRecord(reqObj) {
+    try {
+      // TODO: Use appropriate CORS headers and settings
+      const url = 'https://q3w9rey5g0.execute-api.us-east-2.amazonaws.com/items';
+      await axios.put(url, reqObj)
+    } catch (err) {
+      console.log(err)
+    }
+  }
 
   function handleSubmit(e) {
     e.preventDefault();
     const reqObj = {
+      id: '16',
       name: e.target.name.value,
       brand: e.target.brand.value,
       category: e.target.category.value,
       size: e.target.size.value *1,
       unit : e.target.unit.value,
       price: e.target.price.value *1,
-      ppunit: e.target.price.value/e.target.size.value
+      ppunit: (e.target.price.value/e.target.size.value).toFixed(1)
     }
     console.log(reqObj)
+    addRecord(reqObj)
+    // e.target.reset()
   }
 
   return (
