@@ -35,6 +35,13 @@ form > button {
   border: none;
 }
 
+main > button {
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
 @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;
