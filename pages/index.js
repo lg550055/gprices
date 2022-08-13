@@ -9,6 +9,8 @@ import styles from '../styles/Home.module.css'
 export default function Home() {
 
   const [items, setItems] = useState()
+  const item0 = {name:null, brand:null, caterogy:null, size:null, unit:null, price:null}
+  const [item, setItem] = useState(item0)
 
   const url = 'https://q3w9rey5g0.execute-api.us-east-2.amazonaws.com/items'
   useEffect(() => {
@@ -29,9 +31,9 @@ export default function Home() {
         <h1 className={styles.title}>
           Welcome to <a href="https://nextjs.org">gPrices!</a>
         </h1>
-        <p className={styles.description}>Help each other shop smart</p>
-        <AddForm />        
-        {items && <Display items={items}/>}
+        <h2>Help each other shop smart</h2>
+        <AddForm item={item} setItem={setItem} item0={item0} />
+        {items && <Display items={items} setItem={setItem} />}
       </main>
 
       <footer className={styles.footer}>
