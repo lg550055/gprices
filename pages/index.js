@@ -9,6 +9,7 @@ import styles from '../styles/Home.module.css'
 export default function Home() {
 
   const [items, setItems] = useState()
+
   const url = 'https://q3w9rey5g0.execute-api.us-east-2.amazonaws.com/items'
   useEffect(() => {
     axios.get(url).then(e => {

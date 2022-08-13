@@ -35,7 +35,7 @@ export default function AddForm(){
       <input placeholder="Brand" name="brand" required /><br></br>
       <input placeholder="Category" name="category" required />
       <input placeholder="Size" name="size" required /><br></br>
-      <input placeholder="Unit" name="unit" required />
+      <input placeholder="Unit" name="unit" title="unit of measure" required />
       <input placeholder="Price" name="price" required /><br></br>
       <button>Submit</button>
     </form>

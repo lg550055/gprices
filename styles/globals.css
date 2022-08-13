@@ -35,10 +35,11 @@ form > button {
   border: none;
 }
 
-main > button {
+.nobutt {
   background: none;
   border: none;
-  padding: 0;
+  color: blue;
+  padding: 5px;
   margin: 0;
 }
 
