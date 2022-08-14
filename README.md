@@ -4,7 +4,7 @@ In this inflationary times, let's help each other find the best prices!
 
 ## Arquitechture
 
-Responsive React / Next.js with full CRUD functionality powered by an AWS hosted API.
+Responsive React / Next.js with CRUD functionality powered by a custom AWS-hosted API.
 
 - Front end:
   - React / Next.js
