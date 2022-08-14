@@ -43,7 +43,7 @@ export default function AddForm({ item, setItem, item0 }){
       <input placeholder="Category" name="category" required defaultValue={item.category} />
       <input placeholder="Size" name="size" required defaultValue={item.size} /><br></br>
       <input placeholder="Unit" name="unit" title="unit of measure" required defaultValue={item.unit} />
-      <input placeholder="Price" name="price" required defaultValue={item.price} /><br></br>
+      <input placeholder="Price in cents" name="price" required defaultValue={item.price} /><br></br>
       <button>Submit</button>
     </form>
   )
