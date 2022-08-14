@@ -3,7 +3,7 @@ import axios from "axios"
 export default function Display({ items, setItem }) {
 
   async function deleteItem(id) {
-    const url = 'https://q3w9rey5g0.execute-api.us-east-2.amazonaws.com/items/'+id
+    const url = process.env.NEXT_PUBLIC_RESOURCE_URL + '/' +id
     await axios.delete(url)
   }
 

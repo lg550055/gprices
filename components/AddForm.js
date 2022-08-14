@@ -5,7 +5,7 @@ export default function AddForm({ item, setItem, item0 }){
   async function putItem(reqObj) {
     try {
       // TODO: Use appropriate CORS headers and settings
-      const url = 'https://q3w9rey5g0.execute-api.us-east-2.amazonaws.com/items';
+      const url = process.env.NEXT_PUBLIC_RESOURCE_URL;
       await axios.put(url, reqObj)
     } catch (err) {
       console.log(err)
@@ -19,7 +19,7 @@ export default function AddForm({ item, setItem, item0 }){
     if(item.name) {
       id = item.id
     } else {
-      id = '23'
+      id = '24'
     }
     const reqObj = {
       id: id,

@@ -12,7 +12,7 @@ export default function Home() {
   const item0 = {name:null, brand:null, caterogy:null, size:null, unit:null, price:null}
   const [item, setItem] = useState(item0)
 
-  const url = 'https://q3w9rey5g0.execute-api.us-east-2.amazonaws.com/items'
+  const url = process.env.NEXT_PUBLIC_RESOURCE_URL
   useEffect(() => {
     axios.get(url).then(e => {
       setItems(e.data.Items)
